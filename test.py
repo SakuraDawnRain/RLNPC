@@ -11,9 +11,8 @@ while(max_round>0):
 
     player_id, can_play, observation, termination = env.last()
 
-    print(player_id, can_play, observation, termination)
-
     if termination:
+        env.report()
         break
     
     if can_play:
